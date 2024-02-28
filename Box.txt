@@ -1,0 +1,46 @@
+class Box{
+	
+	float height;
+	float breadth;
+	float width;
+	
+	Box(){
+	
+	height = 10.0f;
+	width = 5.0f;
+	breadth = 4.9f;
+	
+	}
+	
+	void getVolume(){
+	
+	double volume = height*width*breadth;
+	System.out.println("Volume of the box is "+volume);
+	
+	}
+	
+	void getArea(){
+	
+		double area1 = height*width;
+		double area2 = width*breadth;
+		double area3 = breadth*height;
+
+		System.out.println("first possible surface area is "+area1);
+		System.out.println("Second possible surface area is "+area2);
+		System.out.println("Third possible surface area is "+area3);
+	}
+
+	public static void main(String args[]){
+		
+		Box box = new Box();
+
+		box.getVolume();
+		box.getArea();	
+			
+	}
+	
+}
+
+		
+		
+		

@@ -1,0 +1,17 @@
+class Room{
+	
+	float height = 12.3f ;
+	float width = 13.8f ;
+	float breadth = 15.9f ;
+
+	public static void main(String args[]){
+ 
+
+		double volume = (height*width*breadth);
+		System.out.println("volume is "+volume);
+		
+
+	}
+	
+	
+}

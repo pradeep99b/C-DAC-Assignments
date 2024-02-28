@@ -1,0 +1,61 @@
+class Person{
+	
+	int age;
+	float height;
+	float weight;
+	
+	Person(){
+	
+		age = 24;
+		height = 5.4f;
+		weight = 60.0f;
+	
+	}
+	
+	Person(int a){
+	
+		age = a;
+		height = 4.9f;
+		weight =  45.0f;
+	}
+	
+	Person (int b , float h){
+	
+		age = b;
+		height = h;
+		weight = 78.9f;
+	}
+	
+	Person (int a , float b, float c){
+	
+		age = a;
+		height =  b;
+		weight = c;
+	}
+
+	void display(){
+	
+		System.out.println("Age of Person is "+ age);
+		System.out.println("Height of the person is "+height);
+		System.out.println("Weight of the person is "+weight);
+	
+	}
+
+	public static void main(String args[]){
+	
+		Person pone = new Person();
+		Person ptwo = new Person(23);
+		Person pthree = new Person( 28,7.6f);
+		Person pfour =  new Person(34,5.9f,66.0f);
+	
+
+		pone.display();
+		ptwo.display();
+		pthree.display();
+		pfour.display();
+		
+	}
+
+}
+
+		

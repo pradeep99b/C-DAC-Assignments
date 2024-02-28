@@ -1,0 +1,28 @@
+class Vehicle{
+	
+	double price;
+	String color;
+	String model;
+	
+	Vehicle(){
+	
+	price = 156789.98;
+	color =  "Black";
+	model = "TYB342";
+	
+	}
+	
+	void display(){
+	
+	 	System.out.println("Model of the vehicle is "+model);
+	 	System.out.println("Price of the vehicle is "+price);
+		System.out.println("Color of the car is "+color);
+	}
+	
+	
+	public static void main(){
+	
+		Vehicle V = new Vehicle();
+		V.display();
+	}
+}
