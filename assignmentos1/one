@@ -1,0 +1,141 @@
+pradeep@JUNIOR:~/kalpeshwar$ vi file.txt
+pradeep@JUNIOR:~/kalpeshwar$ head file.txt
+Suppose you have a file named "data.txt" containing important information. Display the
+first 10 lines of this file to quickly glance at its contents using a command.
+b. Now, to check the end of the file for any recent additions, display the last 5 lines of
+"data.txt" using another command.
+c. In a file named "numbers.txt," there are a series of numbers. Display the first 15 lines of
+this file to analyze the initial data set.
+d. To focus on the last few numbers of the dataset, display the last 3 lines of "numbers.txt".
+e. Imagine you have a file named "input.txt" with text content. Use a command to translate
+all lowercase letters to uppercase in "input.txt" and save the modified text in a new file
+named "output.txt."
+pradeep@JUNIOR:~/kalpeshwar$ tail file.txt
+this file to analyze the initial data set.
+d. To focus on the last few numbers of the dataset, display the last 3 lines of "numbers.txt".
+e. Imagine you have a file named "input.txt" with text content. Use a command to translate
+all lowercase letters to uppercase in "input.txt" and save the modified text in a new file
+named "output.txt."
+f. In a file named "duplicate.txt," there are several lines of text, some of which are
+duplicates. Use a command to display only the unique lines from "duplicate.txt."
+g. In a file named "fruit.txt," there is a list of fruits, but some fruits are repeated. Use a
+command to display each unique fruit along with the count of its occurrences in
+"fruit.txt."
+pradeep@JUNIOR:~/kalpeshwar$ tail -5 file.txt
+f. In a file named "duplicate.txt," there are several lines of text, some of which are
+duplicates. Use a command to display only the unique lines from "duplicate.txt."
+g. In a file named "fruit.txt," there is a list of fruits, but some fruits are repeated. Use a
+command to display each unique fruit along with the count of its occurrences in
+"fruit.txt."
+pradeep@JUNIOR:~/kalpeshwar$ vi number.txt
+pradeep@JUNIOR:~/kalpeshwar$ head -15 number.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+pradeep@JUNIOR:~/kalpeshwar$ tail -3 number.txt
+13
+14
+15
+pradeep@JUNIOR:~/kalpeshwar$ vi input.txt
+pradeep@JUNIOR:~/kalpeshwar$ tr [:upper:] input.txt output.txt
+tr: extra operand ‘output.txt’
+Try 'tr --help' for more information.
+pradeep@JUNIOR:~/kalpeshwar$ tr [:upper:] input.txt > output.txt
+^C
+pradeep@JUNIOR:~/kalpeshwar$ tr [:upper:] input.txt > vi output.txt
+tr: extra operand ‘output.txt’
+Try 'tr --help' for more information.
+pradeep@JUNIOR:~/kalpeshwar$ tr [:upper:] input.txt >> output.txt
+^C
+pradeep@JUNIOR:~/kalpeshwar$ tr [:lower:] [:upper:] input.txt > output.txt
+tr: extra operand ‘input.txt’
+Try 'tr --help' for more information.
+pradeep@JUNIOR:~/kalpeshwar$ ls
+Kanta  Kusum  Purnanand  Sushma  file.txt  input.txt  number.txt  output.txt  vi
+pradeep@JUNIOR:~/kalpeshwar$ vi output.txt < tr [:lower:] [:upper:] < input.txt
+-bash: tr: No such file or directory
+pradeep@JUNIOR:~/kalpeshwar$ cat output.txt << tr [:lower:] [:upper:] < input.txt
+> ^C
+pradeep@JUNIOR:~/kalpeshwar$ tr [:lower:] [:upper:] < input.txt > output.txt
+pradeep@JUNIOR:~/kalpeshwar$ cat output.txt
+SUPPOSE YOU HAVE A FILE NAMED "DATA.TXT" CONTAINING IMPORTANT INFORMATION. DISPLAY THE
+FIRST 10 LINES OF THIS FILE TO QUICKLY GLANCE AT ITS CONTENTS USING A COMMAND.
+B. NOW, TO CHECK THE END OF THE FILE FOR ANY RECENT ADDITIONS, DISPLAY THE LAST 5 LINES OF
+"DATA.TXT" USING ANOTHER COMMAND.
+C. IN A FILE NAMED "NUMBERS.TXT," THERE ARE A SERIES OF NUMBERS. DISPLAY THE FIRST 15 LINES OF
+THIS FILE TO ANALYZE THE INITIAL DATA SET.
+D. TO FOCUS ON THE LAST FEW NUMBERS OF THE DATASET, DISPLAY THE LAST 3 LINES OF "NUMBERS.TXT".
+E. IMAGINE YOU HAVE A FILE NAMED "INPUT.TXT" WITH TEXT CONTENT. USE A COMMAND TO TRANSLATE
+ALL LOWERCASE LETTERS TO UPPERCASE IN "INPUT.TXT" AND SAVE THE MODIFIED TEXT IN A NEW FILE
+NAMED "OUTPUT.TXT."
+F. IN A FILE NAMED "DUPLICATE.TXT," THERE ARE SEVERAL LINES OF TEXT, SOME OF WHICH ARE
+DUPLICATES. USE A COMMAND TO DISPLAY ONLY THE UNIQUE LINES FROM "DUPLICATE.TXT."
+G. IN A FILE NAMED "FRUIT.TXT," THERE IS A LIST OF FRUITS, BUT SOME FRUITS ARE REPEATED. USE A
+COMMAND TO DISPLAY EACH UNIQUE FRUIT ALONG WITH THE COUNT OF ITS OCCURRENCES IN
+"FRUIT.TXT."
+pradeep@JUNIOR:~/kalpeshwar$ vi duplicate.txt
+pradeep@JUNIOR:~/kalpeshwar$ uniq duplicate.txt
+hello
+hi
+bye
+we
+w
+er
+et
+yu
+yt
+gbn
+fg
+rt
+tr
+rt
+pradeep@JUNIOR:~/kalpeshwar$ vi duplicate.txt
+pradeep@JUNIOR:~/kalpeshwar$ uniq duplicate.txt
+hello
+hi
+bye
+we
+w
+er
+et
+yu
+yt
+gbn
+fg
+rt
+tr
+rt
+hello
+pradeep@JUNIOR:~/kalpeshwar$ vi fruit.txt
+pradeep@JUNIOR:~/kalpeshwar$ uniq -c f
+file.txt   fruit.txt
+pradeep@JUNIOR:~/kalpeshwar$ uniq -c fruit.txt
+      2 apple
+      1 banana
+      1 kiwi
+      1 tomato
+      1 grapes
+      1 tomato
+      1 grapes
+      2 apple
+pradeep@JUNIOR:~/kalpeshwar$ man uniq
+pradeep@JUNIOR:~/kalpeshwar$ uniq -cu fruit.txt
+      1 banana
+      1 kiwi
+      1 tomato
+      1 grapes
+      1 tomato
+      1 grapes
+      
